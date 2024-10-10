@@ -304,7 +304,13 @@ body {
     position: relative;
 }
 
-
+.green-box img {
+    position: absolute;
+    top: -70px;
+    left: 70px;
+    width: 250px;
+    height: 500px;
+}
 
 .border-box {
     border: 5px solid #333;
@@ -445,6 +451,174 @@ body {
     justify-items: end;
     display: grid;
 }
+
+
+
+/*--------------------------------------------------------------*/
+/* MY SKILLS */
+/*--------------------------------------------------------------*/
+
+.skills-title {
+    display: inline-block;
+    padding: 10px 12px;
+    border: 1px solid #0DB760;
+    border-radius: 50%;
+    position: relative;
+    background-color: transparent;
+    color: #0DB760;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.why-hire {
+    font-size: 40px;
+    line-height: 8px;
+    font-weight: bold;
+    padding: 32px 0 28px 0;
+}
+
+.skill-left p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #323433;
+    height: auto;
+}
+
+.hire-me-btn {
+    display: inline-block;
+    padding: 15px 32px;
+    background-color: #0DB760;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.hire-me-btn:hover {
+    background-color: #0DB760;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+
+.left-skill-box {
+    padding: 20px;
+    border-radius: 10px;
+    width: 46%;
+    height: auto;
+
+    align-self: flex-start;
+}
+
+.left-skill-box i {
+    color: #0DB760;
+    padding: 10px 0 10px 5px;
+}
+
+.left-skill-box h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.left-skill-box p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #323433;
+}
+
+
+.skill-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+}
+
+
+.right-skill-box {
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    height: auto;
+    align-self: flex-end;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-skill-box i {
+    color: #0DB760;
+    padding: 10px 0 10px 5px;
+}
+
+.right-skill-box h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.right-skill-box p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #323433;
+}
+
+
+
+.bottom-left-skill-box {
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    height: auto;
+}
+
+.bottom-left-skill-box i {
+    color: #0DB760;
+    padding: 10px 0 10px 5px;
+}
+
+.bottom-left-skill-box h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.bottom-left-skill-box p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #323433;
+}
+
+
+
+.left-img {
+    position: absolute;
+}
+
+.left-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right-img {
+    position: absolute;
+    right: 0;
+}
+
+.right-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
 
 
 
