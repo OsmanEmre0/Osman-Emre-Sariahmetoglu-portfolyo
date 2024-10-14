@@ -960,6 +960,86 @@ textarea {
 
 
 
+/*--------------------------------------------------------------*/
+/* FOOTER */
+/*--------------------------------------------------------------*/
+
+
+.footer-hr {
+    margin: 20px 0;
+    border: 1px solid #222222;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.left, .center, .right {
+    flex: 1;
+}
+
+.left {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.left p {
+    display: contents;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.center {
+    text-align: center;
+}
+
+.center p {
+    display: contents;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.right a {
+    margin-left: 15px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #0DB760;
+    padding: 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /
+    height: 40px;
+}
+
+.right a:hover {
+    background-color: #0AA350;
+}
+
+
+
+
+
 
 
 
