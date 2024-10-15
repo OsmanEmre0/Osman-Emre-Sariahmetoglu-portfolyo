@@ -39,28 +39,23 @@ document.getElementById("phone").addEventListener("input", function(event) {
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
 
-
     const fullName = document.getElementById("full-name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const budget = document.getElementById("budget").value;
     const message = document.getElementById("message").value;
 
-
     const templateParams = {
-        full_name: fullName,
+        fullName: fullName,
         email: email,
         phone: phone,
         budget: budget,
         message: message
     };
 
-
     emailjs.send('service_lfz8r26', 'template_zf9aqec', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
-
-
             Swal.fire({
                 title: "Mesajınız Gönderildi!",
                 text: "Mesajınız başarıyla iletildi. En kısa sürede size geri dönüş yapacağız.",
@@ -68,20 +63,17 @@ document.getElementById("contact-form").addEventListener("submit", function(even
                 confirmButtonText: "Tamam"
             });
 
+
+            document.getElementById("contact-form").reset();
         }, function(error) {
             console.log('FAILED...', error);
-
-
             Swal.fire({
-                title: "Mesaj Gönderilemedi",
-                text: "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
-                icon: "error",
-                confirmButtonText: "Tekrar Dene"
+                title: "Hata!",
+                text: "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+                icon: "error"
             });
         });
 });
-
-
 
 
 
