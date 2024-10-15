@@ -827,6 +827,7 @@ body {
 }
 
 .contact-content p {
+    display: inline-block;
     height: auto;
     color: #323433;
     text-align: center;
@@ -834,7 +835,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-
+    max-width: 800px;
 }
 
 .contact-info {
@@ -871,32 +872,39 @@ body {
     margin-bottom: 16px;
 }
 
-.contact-number {
-    color: #11142D;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 18px;
-    letter-spacing: 0.08px;
-
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #0DB760;
 }
 
-.contact-email {
+.contact-number a {
     color: #11142D;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 18px;
     letter-spacing: 0.08px;
+    text-decoration: none;
 }
 
-.contact-address {
+.contact-email a {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.08px;
+    text-decoration: none;
+    color: #11142D;
+}
+
+.contact-address a {
     color: #11142D;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 18px;
     letter-spacing: 0.08px;
+    text-decoration: none;
 }
 
 .contact-text {
@@ -927,7 +935,7 @@ textarea {
     height: auto;
     flex-shrink: 0;
     border-radius: 8px;
-    border: 0.3px solid #BEC0BF;
+    border: 0.3px solid #0DB760;
     background: #FFF;
     padding: 14px;
 }

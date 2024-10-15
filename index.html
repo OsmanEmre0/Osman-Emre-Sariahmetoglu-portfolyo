@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Icon Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Slpide slider -->
+    <!-- Slpide slider CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 
 <body>
@@ -284,7 +286,7 @@
             <div class="col-md-12 contact-content text-center">
                 <div class="contact-title">Contact</div>
                 <h2>Contact <span class="text-color">Me</span></h2>
-                <p>Herhangi bir sorunuz varsa, bir proje hakkında görüşmek veya benimle iş birliği yapmak istiyorsanız, formu doldurarak bana ulaşabilirsiniz. Size en kısa sürede geri dönüş yapacağım. Sizinle iletişim kurmayı için dört gözle bekliyorum!</p>
+                <p>Bir sorunuz, proje fikriniz veya iş birliği teklifiniz varsa, formu doldurarak bana ulaşabilirsiniz. En kısa sürede geri dönüş yapacağım. Sizinle iletişim kurmayı sabırsızlıkla bekliyorum!</p>
             </div>
         </div>
         <div class="row mt-4">
@@ -295,7 +297,7 @@
                     </div>
                     <div class="contact-text">
                         <div class="contact-label">Call Me</div>
-                        <div class="contact-number">+8801613968687</div>
+                        <div class="contact-number"><a href="tel:+905453307332">+90 (545) 330 7332 </a></div>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -304,7 +306,7 @@
                     </div>
                     <div class="contact-text">
                         <div class="contact-label">Email me</div>
-                        <div class="contact-email">osariahnetoglu@gmail.com</div>
+                        <div class="contact-email"><a href="mailto:osariahnetoglu@gmail.com">osariahnetoglu@gmail.com</a></div>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -313,7 +315,7 @@
                     </div>
                     <div class="contact-text">
                         <div class="contact-label">Address</div>
-                        <div class="contact-address">Kastamonu, Merkez </div>
+                        <div class="contact-address"><a href="https://maps.app.goo.gl/kYdY2etMtERCVR5q7">Kastamonu, Merkez </a></div>
                     </div>
                 </div>
 
@@ -328,7 +330,7 @@
                     </div>
                     <div class="form-group">
                         <input type="tel" id="phone" placeholder="Your Phone Number" required>
-                        <input type="text" id="budget" placeholder="Your Budget (opsiyonel)">
+                        <input type="text" id="budget" placeholder="Your Budget (Optional)">
                     </div>
                     <div class="form-group">
                         <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
@@ -375,10 +377,19 @@
 
 
 
-
+<!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Slpide slider JS -->
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<!-- EMAILJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("2fm74K0fe43IV5y3J");
+    })();
+</script>
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
