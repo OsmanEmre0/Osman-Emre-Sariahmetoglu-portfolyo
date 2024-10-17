@@ -261,6 +261,131 @@ skillBoxes.forEach((box, index) => {
 });
 
 
+// PORTFOLİO GSAP
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+const portfolioLeftElements = document.querySelectorAll('.portfolio-left h3, .portfolio-left h4, .portfolio-left h5, .portfolio-left p, .portfolio-left a, .portfolio-left .splide__arrows');
+
+portfolioLeftElements.forEach((element) => {
+    gsap.from(element, {
+        scrollTrigger: {
+            trigger: element,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        x: -100,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.out'
+    });
+});
+
+
+const portfolioItems = document.querySelectorAll('.portfolio-right .splide__slide');
+
+portfolioItems.forEach((item, index) => {
+    gsap.from(item, {
+        scrollTrigger: {
+            trigger: item,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        x: 100,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.out',
+        delay: index * 0.2
+    });
+});
+
+
+
+// CONTACT GSAP
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+const contactTitleElements = document.querySelectorAll('.contact-title, .contact-content h2, .contact-content p');
+
+contactTitleElements.forEach((element) => {
+    gsap.from(element, {
+        scrollTrigger: {
+            trigger: element,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        y: -50,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.out'
+    });
+});
+
+
+const contactItems = document.querySelectorAll('.contact-info .contact-item');
+
+contactItems.forEach((item) => {
+    gsap.from(item, {
+        scrollTrigger: {
+            trigger: item,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        x: -100,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.out'
+    });
+});
+
+
+const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea, .contact-form .btn-submit');
+
+formInputs.forEach((input) => {
+    gsap.from(input, {
+        scrollTrigger: {
+            trigger: input,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        x: 100,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.out'
+    });
+});
+
+
+// FOOTER GSAP
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+const footerElements = document.querySelectorAll('.footer-content > div');
+
+gsap.from(footerElements, {
+    scrollTrigger: {
+        trigger: footerElements[0],
+        start: 'top bottom',
+        toggleActions: 'play none none none'
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.2,
+    ease: 'power2.out'
+});
+
+
+
+
+
+
+
+
 
 
 

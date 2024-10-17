@@ -399,8 +399,8 @@ body {
 
 
 .about-section .col-md-4 {
-    opacity: 0; /* Başlangıçta görünmez */
-    transform: translateY(50px); /* Aşağıdan yukarı hareket */
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .about-section {
