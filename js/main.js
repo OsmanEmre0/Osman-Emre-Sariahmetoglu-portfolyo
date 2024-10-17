@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// GSAP ile h1 ve h2 başlıkları için animasyon
+
 document.addEventListener("DOMContentLoaded", function () {
     gsap.from('[animate]', {
         y: '-50%',
