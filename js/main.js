@@ -1,4 +1,4 @@
-// SPLİDEE SLİDER
+// SPLİDE SLİDER
 
 document.addEventListener('DOMContentLoaded', function () {
      var splide = new Splide('#portfolio-slider', {
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
          splide.go('>');
      });
  });
+
 
 
 // Contact Control
@@ -74,6 +75,130 @@ document.getElementById("contact-form").addEventListener("submit", function(even
             });
         });
 });
+
+
+// NAVBAR GSAP
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    gsap.from('.navbar-left span, .navbar-left h3', {
+        x: '-100%',
+        opacity: 0,
+        duration: 1.5,
+        ease: 'power2.out',
+        stagger: 0.3
+    });
+
+    gsap.from('.navbar-center ul li', {
+        y: '-100%',
+        opacity: 0,
+        duration: 1.5,
+        ease: 'power2.out',
+        stagger: 0.2
+    });
+
+    gsap.from('.navbar-right ', {
+        x: '100%',
+        opacity: 0,
+        duration: 1.5,
+        ease: 'power2.out'
+    });
+});
+
+
+
+// HEADER GSAP //
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    gsap.from(".border-box", {
+        duration: 1,
+        y: -200,
+        opacity: 0,
+        ease: "power2.out",
+    });
+
+
+    gsap.from(".green-box", {
+        duration: 1,
+        y: -200,
+        opacity: 0,
+        ease: "power2.out",
+        delay: 1,
+    });
+
+
+    gsap.from(".image-wrapper img", {
+        duration: 1,
+        y: -200,
+        opacity: 0,
+        ease: "power2.out",
+        delay: 2,
+    });
+
+    gsap.from(".social-icons p", {
+        duration: 1,
+        y: -50,
+        opacity: 0,
+        ease: "power2.out",
+    });
+
+
+    gsap.from(".social-icons hr", {
+        duration: 1,
+        y: -50,
+        opacity: 0,
+        ease: "power2.out",
+        delay: 1,
+    });
+
+
+    gsap.from(".icons a", {
+        duration: 0.8,
+        y: 50,
+        opacity: 0,
+        ease: "power2.out",
+        stagger: 0.2,
+        delay: 2,
+    });
+
+    gsap.from('.welcome-container', {
+        x: '-100%',
+        opacity: 0,
+        duration: 1.5,
+        ease: 'power2.out'
+    });
+
+    gsap.from('.text-content p', {
+        y: 50,
+        opacity: 0,
+        duration: 1.5,
+        ease: 'power2.out',
+        delay: 0.5
+    });
+
+    gsap.from('.buttons', {
+        x: '-100%',
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out'
+    });
+
+});
+
+// GSAP ile h1 ve h2 başlıkları için animasyon
+document.addEventListener("DOMContentLoaded", function () {
+    gsap.from('[animate]', {
+        y: '-50%',
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        stagger: 0.2
+    });
+});
+
+
 
 
 
