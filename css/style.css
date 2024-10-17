@@ -398,6 +398,11 @@ body {
 /*--------------------------------------------------------------*/
 
 
+.about-section .col-md-4 {
+    opacity: 0; /* Başlangıçta görünmez */
+    transform: translateY(50px); /* Aşağıdan yukarı hareket */
+}
+
 .about-section {
     padding: 80px 0;
     display: flex;

@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// HEADER GSAP //
+// HEADER GSAP
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -197,6 +197,69 @@ document.addEventListener("DOMContentLoaded", function () {
         stagger: 0.2
     });
 });
+
+
+// ABOUT GSAP
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const sections = document.querySelectorAll('.about-section .col-md-4');
+
+sections.forEach((section) => {
+    gsap.to(section, {
+        scrollTrigger: {
+            trigger: section,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power2.out'
+    });
+});
+
+
+// MY SKİLLS GSAP
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+const skillLeftElements = document.querySelectorAll('.skill-left h3, .skill-left h1, .skill-left p, .skill-left .hire-me-btn');
+
+skillLeftElements.forEach((element) => {
+    gsap.from(element, {
+        scrollTrigger: {
+            trigger: element,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        x: -100,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.out'
+    });
+});
+
+
+const skillBoxes = document.querySelectorAll('.skill-right .left-skill-box, .skill-right .right-skill-box, .skill-right .bottom-left-skill-box');
+
+skillBoxes.forEach((box, index) => {
+    gsap.from(box, {
+        scrollTrigger: {
+            trigger: box,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.out',
+        delay: index * 0.2
+    });
+});
+
 
 
 
