@@ -1749,7 +1749,7 @@ textarea {
 }
 
 
-@media (min-width: 375px) and (max-width: 574px) {
+@media (min-width: 372px) and (max-width: 574px) {
 
     .navbar {
         padding: 24px 24px 0 0;
