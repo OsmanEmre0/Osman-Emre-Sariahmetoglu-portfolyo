@@ -1,28 +1,77 @@
 // SPLİDE SLİDER
 
 document.addEventListener('DOMContentLoaded', function () {
-     var splide = new Splide('#portfolio-slider', {
-         type       : 'slide',
-         perPage: 2.5,
-         perMove: 1,
-         gap: '10px',
-         focus: 'center',
-         pagination : false,
-         arrows     : false,
-     }).mount();
+    var splide = new Splide('#portfolio-slider', {
+        type       : 'slide',
+        perPage: 2.5,
+        perMove: 1,
+        gap: '10px',
+        focus: 'center',
+        pagination : false,
+        arrows     : false,
+    }).mount();
 
 
-     const prevButton = document.querySelector('.splide__arrow--left');
-     const nextButton = document.querySelector('.splide__arrow--right');
+    function updatePerPage() {
+        const width = window.innerWidth;
 
-     prevButton.addEventListener('click', () => {
-         splide.go('<');
-     });
-     nextButton.addEventListener('click', () => {
-         splide.go('>');
-     });
- });
+        if (width >= 420 && width <= 991) {
+            splide.options.perPage = 1;
+        } else {
+            splide.options.perPage = 2.5;
+        }
+        splide.refresh();
+    }
 
+
+    updatePerPage();
+
+
+    window.addEventListener('resize', updatePerPage);
+
+    const prevButton = document.querySelector('.splide__arrow--left');
+    const nextButton = document.querySelector('.splide__arrow--right');
+
+    prevButton.addEventListener('click', () => {
+        splide.go('<');
+    });
+    nextButton.addEventListener('click', () => {
+        splide.go('>');
+    });
+});
+
+
+// ABOUT
+
+let isAnimated = false;
+
+
+function animateValue(element, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        element.innerHTML = Math.floor(progress * (end - start) + start);
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+
+window.addEventListener('scroll', function() {
+    var aboutSection = document.querySelector('.about-section');
+    var position = aboutSection.getBoundingClientRect();
+
+
+    if (!isAnimated && position.top >= 0 && position.bottom <= window.innerHeight) {
+        animateValue(document.querySelector('.left-content h1'), 0, 2, 2500); // 2+
+        animateValue(document.querySelector('.middle-content h1'), 0, 30, 2500); // 30+
+        animateValue(document.querySelector('.right-content h1'), 0, 99, 2500); // 99+
+        isAnimated = true;
+    }
+});
 
 
 // Contact Control
@@ -79,8 +128,8 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
 // NAVBAR GSAP
 
-
 document.addEventListener("DOMContentLoaded", function () {
+    // GSAP Animasyonları
     gsap.from('.navbar-left span, .navbar-left h3', {
         x: '-100%',
         opacity: 0,
@@ -103,7 +152,31 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: 1.5,
         ease: 'power2.out'
     });
+
+    // Navbar toggle işlevi
+    const toggleButton = document.getElementById('navbar-toggle');
+    const toggleMenu = document.getElementById('navbar-toggle-menu');
+
+    // Toggle butonuna tıklayınca menü açma/kapama işlevi
+    toggleButton.addEventListener('click', () => {
+        toggleMenu.classList.toggle('show');
+        toggleButton.classList.toggle('active');
+    });
+
+    // Boş bir alana tıklayınca menüyü kapatma işlevi
+    document.addEventListener('click', function (event) {
+        // Eğer tıklama toggle button veya toggle menu dışında ise ve menu açıksa
+        if (!toggleMenu.contains(event.target) && !toggleButton.contains(event.target)) {
+            if (toggleMenu.classList.contains('show')) {
+                toggleMenu.classList.remove('show'); // Menüyü kapat
+                toggleButton.classList.remove('active'); // Toggle butonunu sıfırla
+            }
+        }
+    });
 });
+
+
+
 
 
 
