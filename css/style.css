@@ -1243,6 +1243,7 @@ textarea {
 
     .navbar-center.show {
         left: 0;
+        height: 100%;
     }
 
     .navbar-center.show-toggle {
@@ -1373,6 +1374,7 @@ textarea {
 
     .navbar-center.show {
         left: 0;
+        height: 100%;
     }
 
     .navbar-links {
@@ -1583,6 +1585,7 @@ textarea {
 
     .navbar-center.show {
         left: 0;
+        height: 100%;
     }
 
     .navbar-links {
@@ -1759,24 +1762,24 @@ textarea {
 }
 
 
-@media (min-width: 320px) and (max-width: 574px) {
+@media (min-width: 372px) and (max-width: 574px) {
 
     .navbar-center {
-        top: 0; /* Üstten yapışmasını sağlar */
-        left: -100%; /* Menü kapalıyken görünmemesini sağlar */
-        height: auto; /* Yükseklik otomatik ayarlanır */
-        overflow: hidden; /* Taşmayı önler */
+        top: 0;
+        left: -100%;
+        height: auto;
+        overflow: hidden;
     }
 
     .navbar-center.show {
-        left: 0; /* Menü açıldığında görünür */
-        height: 100vh; /* Tam ekran yüksekliği alır */
-        overflow-y: auto; /* Yüksekliği aşan içerikler kaydırılır */
+        left: 0;
+        height: 100%;
+        overflow-y: auto;
     }
 
     .navbar-social-icon {
-        margin-top: auto; /* İkonları altta tutar */
-        padding: 20px 0; /* İkonlar arasında yeterli boşluk */
+        margin-top: auto;
+        padding: 20px 0;
     }
 
     .navbar {
@@ -1998,19 +2001,19 @@ textarea {
     }
 
     .footer-content {
-        flex-direction: column; /* Dikey hizalama için */
-        align-items: center; /* Ortada hizalama */
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
     .footer-content .left,
     .footer-content .center,
     .footer-content .right {
-        margin-bottom: 10px; /* Alt alta gelirken aralıkları ayarla */
+        margin-bottom: 10px;
     }
 
     .footer-content .right a {
-        margin: 5px; /* İkonlar arasındaki boşlukları küçült */
+        margin: 5px;
     }
 
     .dot img {
