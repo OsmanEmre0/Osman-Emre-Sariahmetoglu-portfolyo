@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updatePerPage() {
         const width = window.innerWidth;
 
-        if (width >= 420 && width <= 991) {
+        if (width >= 320 && width <= 991) {
             splide.options.perPage = 1;
         } else {
             splide.options.perPage = 2.5;

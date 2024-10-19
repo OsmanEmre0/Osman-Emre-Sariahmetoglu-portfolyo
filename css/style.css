@@ -1337,35 +1337,36 @@ textarea {
         flex-direction: column;
         cursor: pointer;
         z-index: 1010;
+        margin: 10px;
     }
 
     .navbar-toggle span {
         display: block;
         height: 4px;
-        width: 30px; /* Boyutlar biraz büyütüldü */
+        width: 30px;
         background-color: #0DB760;
-        margin: 4px 0; /* Aralarındaki boşluk genişletildi */
+        margin: 3px 0;
     }
 
     .navbar {
         position: relative;
         z-index: 1000;
         justify-content: end;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     .navbar-center {
         position: fixed;
-        top: 0;
+        top: 20px;
         left: -100%;
-        height: 100%;
-        width: 300px; /* Genişlik artırıldı */
+        height: calc(100% - 20px);
+        width: 300px;
         background-color: white;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: start;
-        padding: 30px; /* İçerik dolgusu artırıldı */
+        padding: 30px;
         transition: left 0.3s ease;
         z-index: 1000;
     }
@@ -1374,53 +1375,57 @@ textarea {
         left: 0;
     }
 
-    .navbar-center.show-toggle {
+    .navbar-links {
         display: flex;
         flex-direction: column;
-        gap: 25px; /* Aralıklar artırıldı */
-        justify-content: flex-start;
-        align-items: start;
-        padding-top: 50px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        width: 100%;
     }
 
     .navbar-links li {
-        margin: 25px 0; /* Linkler arasındaki boşluk artırıldı */
+        margin: 18px 0;
         width: 100%;
     }
 
     .navbar-links li a {
-        font-size: 22px; /* Font boyutu büyütüldü */
+        font-size: 18px;
         font-weight: bold;
         width: 100%;
         display: block;
+        padding: 10px;
+        transition: background-color 0.3s;
+    }
+
+    .navbar-links li a:hover {
+        background-color: #f0f0f0;
     }
 
     .navbar-center a h3 {
-        font-size: 28px; /* Başlık boyutu büyütüldü */
-        margin-bottom: 25px;
+        font-size: 22px;
+        margin-bottom: 20px;
         color: #0DB760;
     }
 
     .navbar-center a span {
-        font-size: 45px; /* Span boyutu büyütüldü */
+        font-size: 36px;
         color: #0DB760;
     }
 
     .navbar-center .btn {
-        font-size: 22px; /* Buton boyutu büyütüldü */
-        padding: 17px 22px; /* Buton iç dolgusu artırıldı */
-        border-radius: 12px;
+        font-size: 18px;
+        padding: 12px 15px;
+        border-radius: 10px;
         border: 3px solid #0DB760;
+        margin-top: 15px;
     }
 
     .navbar-social-icon {
-        justify-content: space-between;
-        padding: 25px 0; /* Sosyal ikonların aralığı artırıldı */
+        justify-content: center;
+        padding: 15px 0;
     }
 
     .navbar-social-icon a {
-        font-size: 26px; /* Sosyal ikon boyutu büyütüldü */
+        font-size: 24px;
+        margin: 0 10px;
     }
 
     .header-section {
@@ -1542,35 +1547,36 @@ textarea {
         flex-direction: column;
         cursor: pointer;
         z-index: 1010;
+        margin: 8px;
     }
 
     .navbar-toggle span {
         display: block;
         height: 4px;
-        width: 28px; /* Biraz daha küçük boyut */
+        width: 28px;
         background-color: #0DB760;
-        margin: 3px 0; /* Aralarındaki boşluk daraltıldı */
+        margin: 2px 0;
     }
 
     .navbar {
         position: relative;
         z-index: 1000;
         justify-content: end;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     .navbar-center {
         position: fixed;
-        top: 0;
+        top: 10px;
         left: -100%;
-        height: 100%;
-        width: 280px; /* Genişlik biraz daraltıldı */
+        height: calc(100% - 10px);
+        width: 250px;
         background-color: white;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: start;
-        padding: 25px; /* İçerik dolgusu ayarlandı */
+        padding: 20px;
         transition: left 0.3s ease;
         z-index: 1000;
     }
@@ -1579,53 +1585,57 @@ textarea {
         left: 0;
     }
 
-    .navbar-center.show-toggle {
+    .navbar-links {
         display: flex;
         flex-direction: column;
-        gap: 20px; /* Aralıklar biraz daraltıldı */
-        justify-content: flex-start;
-        align-items: start;
-        padding-top: 40px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        width: 100%;
     }
 
     .navbar-links li {
-        margin: 20px 0; /* Linkler arasındaki boşluk */
+        margin: 12px 0;
         width: 100%;
     }
 
     .navbar-links li a {
-        font-size: 20px; /* Font boyutu daha küçük */
+        font-size: 16px;
         font-weight: bold;
         width: 100%;
         display: block;
+        padding: 8px;
+        transition: background-color 0.3s;
+    }
+
+    .navbar-links li a:hover {
+        background-color: #f0f0f0;
     }
 
     .navbar-center a h3 {
-        font-size: 24px; /* Başlık boyutu küçültüldü */
-        margin-bottom: 20px;
+        font-size: 20px;
+        margin-bottom: 15px;
         color: #0DB760;
     }
 
     .navbar-center a span {
-        font-size: 38px; /* Span boyutu biraz küçültüldü */
+        font-size: 30px;
         color: #0DB760;
     }
 
     .navbar-center .btn {
-        font-size: 20px; /* Buton boyutu küçültüldü */
-        padding: 15px 20px;
-        border-radius: 10px; /* Hafifçe daraltıldı */
+        font-size: 16px;
+        padding: 10px 12px;
+        border-radius: 8px;
         border: 3px solid #0DB760;
+        margin-top: 10px;
     }
 
     .navbar-social-icon {
-        justify-content: space-between;
-        padding: 20px 0; /* Sosyal ikonların aralığı daraltıldı */
+        justify-content: center;
+        padding: 10px 0;
     }
 
     .navbar-social-icon a {
-        font-size: 24px; /* Sosyal ikon boyutu küçültüldü */
+        font-size: 20px;
+        margin: 0 8px;
     }
 
     .text-content h2 {
@@ -1749,7 +1759,25 @@ textarea {
 }
 
 
-@media (min-width: 372px) and (max-width: 574px) {
+@media (min-width: 320px) and (max-width: 574px) {
+
+    .navbar-center {
+        top: 0; /* Üstten yapışmasını sağlar */
+        left: -100%; /* Menü kapalıyken görünmemesini sağlar */
+        height: auto; /* Yükseklik otomatik ayarlanır */
+        overflow: hidden; /* Taşmayı önler */
+    }
+
+    .navbar-center.show {
+        left: 0; /* Menü açıldığında görünür */
+        height: 100vh; /* Tam ekran yüksekliği alır */
+        overflow-y: auto; /* Yüksekliği aşan içerikler kaydırılır */
+    }
+
+    .navbar-social-icon {
+        margin-top: auto; /* İkonları altta tutar */
+        padding: 20px 0; /* İkonlar arasında yeterli boşluk */
+    }
 
     .navbar {
         padding: 24px 24px 0 0;
