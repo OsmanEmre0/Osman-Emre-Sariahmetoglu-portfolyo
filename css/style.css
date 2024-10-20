@@ -1271,6 +1271,7 @@ textarea {
         transition: left 0.3s ease;
         z-index: 1000;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
     }
 
     .navbar-center.show {
@@ -1508,6 +1509,7 @@ textarea {
         transition: left 0.3s ease;
         z-index: 1000;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
     }
 
     .navbar-center.show {
@@ -1596,7 +1598,7 @@ textarea {
     .text-content {
         order: 2;
         width: 100%;
-        padding: 24px 0 0 28px;
+        padding: 26px 0 0 0;
     }
 
     .d-flex {
@@ -1773,6 +1775,7 @@ textarea {
         transition: left 0.3s ease;
         z-index: 1000;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
     }
 
     .navbar-center.show {
@@ -1823,7 +1826,7 @@ textarea {
         padding: 8px 10px;
         border-radius: 8px;
         border: 3px solid #0DB760;
-        margin-left: 0;
+        margin-left: 16px;
     }
 
     .navbar-social-icon {
@@ -1858,7 +1861,7 @@ textarea {
     .text-content h2 {
         font-size: 18px;
         line-height: 4px;
-        margin-top: 0;
+        margin: 0;
     }
 
     .text-content h1 {
@@ -1886,7 +1889,7 @@ textarea {
     .text-content {
         order: 2;
         width: 100%;
-        padding: 24px 0 0 28px;
+        padding: 26px 0 0 0;
     }
 
     .d-flex {
@@ -1929,13 +1932,13 @@ textarea {
     }
 
     .image-wrapper {
-        width: 70%;
-        height: 70%
+        width: 69%;
+        height: 69%
     }
 
     .green-box, .border-box {
-        max-width: 135px;
-        max-height: 135px;
+        max-width: 136px;
+        max-height: 136px;
     }
 
     .welcome-text {
@@ -1972,10 +1975,13 @@ textarea {
     }
 
 
-
     .scroll-to-top {
         right: 10px;
         bottom: 10px;
+        font-size: 20px;
+        padding: 6px;
+        width: 40px;
+        height: 40px;
     }
 
     .why-hire {
