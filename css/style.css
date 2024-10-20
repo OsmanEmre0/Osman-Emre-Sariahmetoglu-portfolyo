@@ -8,6 +8,7 @@ html, body {
     position: relative;
     width: 100%;
     height: 100%;
+
     font-family: Inter sans-serif;
 }
 
@@ -16,6 +17,7 @@ body {
     padding: 0 !important;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 /*--------------------------------------------------------------*/
@@ -151,7 +153,7 @@ body {
     height: 50px;
     font-size: 24px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 999;
     text-align: center;
 }
 
@@ -881,6 +883,12 @@ body {
 /* CONTACT */
 /*--------------------------------------------------------------*/
 
+.contact-section {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 
 .contact-title {
     display: inline-block;
@@ -1120,7 +1128,7 @@ textarea {
 /* RESPONSİVE */
 /*--------------------------------------------------------------*/
 
-@media (min-width: 1201px) and (max-width: 1399px) {
+@media (min-width: 1200px) and (max-width: 1399px) {
 
     .text-content h1 {
         font-size: 52px;
@@ -1134,10 +1142,18 @@ textarea {
     .navbar {
         padding: 34px 0 0 52px;
     }
+
+    .image-container {
+        height: 90vh;
+    }
+
+    .text {
+        text-align: center;
+    }
 }
 
 
-@media (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1199px) {
     .text-content h1 {
         font-size: 42px;
         line-height: 52px;
@@ -1187,6 +1203,10 @@ textarea {
         padding-left: 0;
     }
 
+    .portfolio-left p {
+        line-height: 125%;
+    }
+
     .text {
         font-size: 16px;
         text-align: center;
@@ -1195,138 +1215,18 @@ textarea {
     .navbar {
         padding: 34px 0 0 52px;
     }
-}
 
-@media (max-width: 992px) {
-    .navbar-left,
-    .navbar-right {
-        display: none;
+    .navbar-balloon {
+        width: 40%;
     }
 
-    .navbar-toggle {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        z-index: 1010;
-    }
-
-    .navbar-toggle span {
-        display: block;
-        height: 4px;
-        width: 25px;
-        background-color: #0DB760;
-        margin: 3px 0;
-    }
-
-    .navbar {
-        position: relative;
-        z-index: 1000;
-        justify-content: end;
-        align-items: flex-end;
-    }
-
-    .navbar-center {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        height: 100%;
-        width: 250px;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: start;
-        padding: 20px;
-        transition: left 0.3s ease;
-        z-index: 1000;
-    }
-
-    .navbar-center.show {
-        left: 0;
-        height: 100%;
-    }
-
-    .navbar-center.show-toggle {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: flex-start;
-        align-items: start;
-        padding-top: 40px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    }
-
-    .toggle-a {
-        text-decoration: none !important;
-    }
-
-    .navbar-links {
-        list-style: none;
-        padding: 0;
-        width: 100%;
-        display: flow !important;
-    }
-
-    .navbar-links li {
-        margin: 20px 0;
-        width: 100%;
-    }
-
-    .navbar-links li a {
-        text-decoration: none;
-        font-size: 20px;
-        color: #222;
-        font-weight: bold;
-        width: 100%;
-        display: block;
-    }
-
-    .navbar-center a h3 {
-        font-size: 25px;
-        margin-bottom: 20px;
-        text-decoration: none;
-        color: #0DB760;
-    }
-
-    .navbar-center a span {
-        font-size: 40px;
-        color: #0DB760;
-    }
-
-
-    .navbar-center .btn {
-        font-size: 20px;
-        padding: 15px 20px;
-        background-color: #fff;
-        color: black;
-        text-decoration: none;
-        border-radius: 12px;
-        border: 3px solid #0DB760;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        align-self: flex-start;
-    }
-
-    .navbar-social-icon {
-        display: flex;
-        justify-content: space-around;
-        margin-top: auto;
-        width: 100%;
-        padding: 20px 0;
-    }
-
-    .navbar-social-icon a {
-        color: #0DB760;
-        font-size: 24px;
-        text-decoration: none;
-    }
-
-    .navbar-social-icon a:hover {
-        color: #222; /
-    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
+    .navbar-balloon {
+        width: 60%;
+    }
 
     .navbar-left,
     .navbar-right {
@@ -1358,18 +1258,19 @@ textarea {
 
     .navbar-center {
         position: fixed;
-        top: 20px;
+        top: 0;
         left: -100%;
-        height: calc(100% - 20px);
+        height: 100%;
         width: 300px;
         background-color: white;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: start;
         padding: 30px;
         transition: left 0.3s ease;
         z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
     .navbar-center.show {
@@ -1378,17 +1279,15 @@ textarea {
     }
 
     .navbar-links {
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
-    .navbar-links li {
-        margin: 18px 0;
-        width: 100%;
-    }
 
     .navbar-links li a {
+        text-decoration: none ;
         font-size: 18px;
         font-weight: bold;
         width: 100%;
@@ -1402,32 +1301,42 @@ textarea {
     }
 
     .navbar-center a h3 {
-        font-size: 22px;
+        text-decoration: none ;
+        font-size: 34px;
         margin-bottom: 20px;
-        color: #0DB760;
+        color: #0DB760 ;
+    }
+
+    .toggle-a {
+        text-decoration: none;
     }
 
     .navbar-center a span {
-        font-size: 36px;
+        font-size: 34px;
         color: #0DB760;
     }
 
     .navbar-center .btn {
+        order: 1;
         font-size: 18px;
         padding: 12px 15px;
         border-radius: 10px;
         border: 3px solid #0DB760;
-        margin-top: 15px;
+        margin-left: 50px;
     }
 
     .navbar-social-icon {
+        margin-top: 10px;
+        order: 3;
         justify-content: center;
-        padding: 15px 0;
+        padding: 15px 15px;
     }
 
     .navbar-social-icon a {
+        text-decoration: none;
+        color: #0DB760;
         font-size: 24px;
-        margin: 0 10px;
+        margin: 0 12px;
     }
 
     .header-section {
@@ -1447,6 +1356,10 @@ textarea {
         justify-content: space-between;
         width: 100%;
         padding: 18px 0 0 0;
+    }
+
+    .image-container {
+        height: 90vh;
     }
 
     .image-content {
@@ -1493,6 +1406,19 @@ textarea {
         width: 50%;
     }
 
+    .portfolio-left h4 {
+        font-size: 28px;
+    }
+
+    .portfolio-left h5 {
+        font-size: 28px;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 18px;
+    }
+
     .row.mt-4 {
         display: flex;
         flex-direction: column;
@@ -1513,7 +1439,7 @@ textarea {
     }
 
     .contact-item {
-        padding: 0 24px 0 8px;
+        padding: 0 22px 0 8px;
     }
 
     .contact-right {
@@ -1569,18 +1495,19 @@ textarea {
 
     .navbar-center {
         position: fixed;
-        top: 10px;
+        top: 0;
         left: -100%;
-        height: calc(100% - 10px);
-        width: 250px;
+        height: 100%;
+        width: 270px;
         background-color: white;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: start;
         padding: 20px;
         transition: left 0.3s ease;
         z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
     .navbar-center.show {
@@ -1589,17 +1516,14 @@ textarea {
     }
 
     .navbar-links {
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
-    .navbar-links li {
-        margin: 12px 0;
-        width: 100%;
-    }
-
     .navbar-links li a {
+        text-decoration: none;
         font-size: 16px;
         font-weight: bold;
         width: 100%;
@@ -1613,9 +1537,14 @@ textarea {
     }
 
     .navbar-center a h3 {
-        font-size: 20px;
+        text-decoration: none;
+        font-size: 30px;
         margin-bottom: 15px;
         color: #0DB760;
+    }
+
+    .toggle-a {
+        text-decoration: none;
     }
 
     .navbar-center a span {
@@ -1624,25 +1553,36 @@ textarea {
     }
 
     .navbar-center .btn {
-        font-size: 16px;
+        order: 1;
+        font-size: 18px;
         padding: 10px 12px;
         border-radius: 8px;
         border: 3px solid #0DB760;
-        margin-top: 10px;
+        margin-left: 35px;
     }
 
     .navbar-social-icon {
+        margin-top: 10px;
+        order: 3;
         justify-content: center;
-        padding: 10px 0;
+        padding: 10px 14px;
     }
 
     .navbar-social-icon a {
-        font-size: 20px;
-        margin: 0 8px;
+        text-decoration: none;
+        color: #0DB760;
+        font-size: 22px;
+        margin: 0 10px;
+    }
+
+    .text-content h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        line-height: 58px;
     }
 
     .text-content h2 {
-        font-size: 34px;
+        font-size: 38px;
         line-height: 46px;
     }
 
@@ -1678,6 +1618,10 @@ textarea {
         margin-top: 20px;
     }
 
+    .image-container {
+        height: 90vh;
+    }
+
     .image-content {
         width: 100%;
     }
@@ -1709,6 +1653,22 @@ textarea {
         transform: rotate(90deg);
     }
 
+    .left-content h1,
+    .middle-content h1,
+    .right-content h1 {
+        font-size: 36px;
+        line-height: 18px;
+        margin: 0;
+    }
+
+    .left-content p,
+    .middle-content p,
+    .right-content p {
+        font-size: 28px;
+        margin: 0;
+
+    }
+
     .portfolio-left {
         width: 100%;
     }
@@ -1718,8 +1678,14 @@ textarea {
         padding: 0;
     }
 
+    .image-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
     .image-container img {
         object-fit: cover;
+        width: 100%;
     }
 
     .contact-info {
@@ -1762,28 +1728,116 @@ textarea {
 }
 
 
-@media (min-width: 372px) and (max-width: 574px) {
+@media  (max-width: 574px) {
+
+    .navbar-left,
+    .navbar-right {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1010;
+        margin: 8px;
+    }
+
+    .navbar-toggle span {
+        display: block;
+        height: 4px;
+        width: 28px;
+        background-color: #0DB760;
+        margin: 2px 0;
+    }
+
+    .navbar {
+        position: relative;
+        z-index: 1000;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
 
     .navbar-center {
+        position: fixed;
         top: 0;
         left: -100%;
-        height: auto;
-        overflow: hidden;
+        height: 100%;
+        width: 200px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        padding: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
     .navbar-center.show {
         left: 0;
         height: 100%;
-        overflow-y: auto;
+    }
+
+    .navbar-links {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        width: 100%;
+        display: block;
+        padding: 8px;
+        transition: background-color 0.3s;
+    }
+
+    .navbar-links li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-center a h3 {
+        text-decoration: none;
+        font-size: 26px;
+        margin-bottom: 15px;
+        color: #0DB760;
+    }
+
+    .toggle-a {
+        text-decoration: none;
+    }
+
+    .navbar-center a span {
+        font-size: 26px;
+        color: #0DB760;
+    }
+
+    .navbar-center .btn {
+        order: 1;
+        font-size: 16px;
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 3px solid #0DB760;
+        margin-left: 0;
     }
 
     .navbar-social-icon {
-        margin-top: auto;
-        padding: 20px 0;
+        margin-top: 10px;
+        order: 3;
+        justify-content: center;
+        padding: 10px 0;
     }
 
-    .navbar {
-        padding: 24px 24px 0 0;
+    .navbar-social-icon a {
+        text-decoration: none;
+        color: #0DB760;
+        font-size: 20px;
+        margin: 0 8px;
     }
 
     .section-header {
@@ -1795,22 +1849,32 @@ textarea {
         width: 35%;
     }
 
+    .text-content h4 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+
     .text-content h2 {
-        font-size: 20px;
-        line-height: 8px;
-        margin-bottom: 0;
+        font-size: 18px;
+        line-height: 4px;
+        margin-top: 0;
     }
 
     .text-content h1 {
-        font-size: 20px;
-        line-height: 22px;
+        font-size: 18px;
+        line-height: 4px;
         margin-bottom: 0;
         padding: 12px 0 0 0;
     }
 
+    .text-color {
+        line-height: 40px;
+    }
+
     .text-content p {
-        font-size: 12px;
-        line-height: 18px;
+        font-size: 10px;
+        line-height: 14px;
     }
 
     .header-section {
@@ -1844,6 +1908,18 @@ textarea {
         margin-top: 20px;
     }
 
+    .social-icons p {
+        font-size: 12px;
+    }
+
+    .social-icons hr {
+        height: 50px;
+    }
+
+    .icons a {
+        font-size: 14px;
+    }
+
     .image-content {
         width: 100%;
     }
@@ -1853,13 +1929,13 @@ textarea {
     }
 
     .image-wrapper {
-        width: 78%;
-        height: 78%;
+        width: 70%;
+        height: 70%
     }
 
     .green-box, .border-box {
-        max-width: 190px;
-        max-height: 190px;
+        max-width: 135px;
+        max-height: 135px;
     }
 
     .welcome-text {
@@ -1868,6 +1944,8 @@ textarea {
 
     .welcome-container {
         padding: 8px 8px ;
+        font-size: 16px;
+        line-height: 10px;
     }
 
     .social-icons {
@@ -1875,7 +1953,7 @@ textarea {
     }
 
     .contact-btn {
-        padding: 4px 16px;
+        padding: 10px 16px;
         font-size: 12px;
     }
 
@@ -1893,16 +1971,20 @@ textarea {
         transform: rotate(90deg);
     }
 
-    .about-section {
-        padding: 80px 0 0 42px
-    }
+
 
     .scroll-to-top {
-        right: 100px;
+        right: 10px;
+        bottom: 10px;
     }
 
     .why-hire {
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    .skill-left p {
+        font-size: 12px;
+        line-height: 125%;
     }
 
     .hire-me-btn {
@@ -1913,18 +1995,17 @@ textarea {
     .left-skill-box h4,
     .right-skill-box h4,
     .bottom-left-skill-box h4 {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .right-skill-box p,
-    .bottom-left-skill-box p {
-        font-size: 12px;
-        line-height: 20px;
+    .bottom-left-skill-box p,
+    .left-skill-box p {
+        font-size: 10px;
+        line-height: 12px;
     }
 
-    .left-skill-box p {
-        font-size: 12px;
-    }
+
 
     .left-content h1,
     .middle-content h1,
@@ -2032,9 +2113,25 @@ textarea {
         padding: 0 0 0 32px;
     }
 
+    .skills-title {
+        font-size: 16px;
+        line-height: 10px;
+    }
+
     .image-container {
         position: relative;
         width: 80%;
+        height: 50vh;
+    }
+
+    .portfolio-title {
+        font-size: 16px;
+        line-height: 10px;
+    }
+
+    .text {
+        font-size: 12px;
+        text-align: center;
     }
 
     .splide__slide {
@@ -2046,6 +2143,25 @@ textarea {
     .portfolio-last {
         padding-bottom: 50px;
         padding-top: 50px;
+    }
+
+    .contact-title {
+        font-size: 16px;
+        line-height: 10px;
+    }
+
+    .contact-content h2 {
+        font-size: 16px;
+    }
+
+    .contact-content p {
+        font-size: 12px;
+        line-height: 125%;
+    }
+
+    .contact-item {
+        margin-bottom: 20px;
+        font-size: 14px;
     }
 }
 

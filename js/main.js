@@ -15,9 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function updatePerPage() {
         const width = window.innerWidth;
 
-        if (width >= 320 && width <= 991) {
+         if  (width >= 320 && width <= 991) {
             splide.options.perPage = 1;
-        } else {
+        }
+        else {
             splide.options.perPage = 2.5;
         }
         splide.refresh();
@@ -129,7 +130,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 // NAVBAR GSAP
 
 document.addEventListener("DOMContentLoaded", function () {
-    // GSAP Animasyonları
+
     gsap.from('.navbar-left span, .navbar-left h3', {
         x: '-100%',
         opacity: 0,
@@ -153,23 +154,23 @@ document.addEventListener("DOMContentLoaded", function () {
         ease: 'power2.out'
     });
 
-    // Navbar toggle işlevi
+
     const toggleButton = document.getElementById('navbar-toggle');
     const toggleMenu = document.getElementById('navbar-toggle-menu');
 
-    // Toggle butonuna tıklayınca menü açma/kapama işlevi
+
     toggleButton.addEventListener('click', () => {
         toggleMenu.classList.toggle('show');
         toggleButton.classList.toggle('active');
     });
 
-    // Boş bir alana tıklayınca menüyü kapatma işlevi
+
     document.addEventListener('click', function (event) {
-        // Eğer tıklama toggle button veya toggle menu dışında ise ve menu açıksa
+
         if (!toggleMenu.contains(event.target) && !toggleButton.contains(event.target)) {
             if (toggleMenu.classList.contains('show')) {
-                toggleMenu.classList.remove('show'); // Menüyü kapat
-                toggleButton.classList.remove('active'); // Toggle butonunu sıfırla
+                toggleMenu.classList.remove('show');
+                toggleButton.classList.remove('active');
             }
         }
     });
