@@ -357,6 +357,8 @@ portfolioLeftElements.forEach((element) => {
 });
 
 
+gsap.registerPlugin(ScrollTrigger);
+
 const portfolioItems = document.querySelectorAll('.portfolio-right .splide__slide');
 
 portfolioItems.forEach((item, index) => {
@@ -364,7 +366,7 @@ portfolioItems.forEach((item, index) => {
         scrollTrigger: {
             trigger: item,
             start: 'top 80%',
-            toggleActions: 'play none none reverse'
+            once: true,
         },
         x: 100,
         opacity: 0,
