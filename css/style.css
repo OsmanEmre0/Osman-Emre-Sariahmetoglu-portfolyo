@@ -1859,13 +1859,13 @@ textarea {
 
 
     .text-content h2 {
-        font-size: 23px;
+        font-size: 22px;
         line-height: 4px;
         margin: 0;
     }
 
     .text-content h1 {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 4px;
         margin-bottom: 0;
         padding: 12px 0 0 0;
@@ -1876,7 +1876,7 @@ textarea {
     }
 
     .text-content p {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 14px;
     }
 
@@ -2001,13 +2001,13 @@ textarea {
     .left-skill-box h4,
     .right-skill-box h4,
     .bottom-left-skill-box h4 {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .right-skill-box p,
     .bottom-left-skill-box p,
     .left-skill-box p {
-        font-size: 14px;
+        font-size: 12px;
         line-height: 14px;
     }
 
