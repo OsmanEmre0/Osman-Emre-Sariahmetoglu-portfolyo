@@ -1859,13 +1859,13 @@ textarea {
 
 
     .text-content h2 {
-        font-size: 18px;
+        font-size: 22px;
         line-height: 4px;
         margin: 0;
     }
 
     .text-content h1 {
-        font-size: 18px;
+        font-size: 22px;
         line-height: 4px;
         margin-bottom: 0;
         padding: 12px 0 0 0;
@@ -1876,7 +1876,7 @@ textarea {
     }
 
     .text-content p {
-        font-size: 10px;
+        font-size: 14px;
         line-height: 14px;
     }
 
@@ -1912,7 +1912,7 @@ textarea {
     }
 
     .social-icons p {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .social-icons hr {
@@ -1920,7 +1920,7 @@ textarea {
     }
 
     .icons a {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .image-content {
@@ -1947,8 +1947,8 @@ textarea {
 
     .welcome-container {
         padding: 8px 8px ;
-        font-size: 16px;
-        line-height: 10px;
+        font-size: 20px;
+        line-height: 14px;
     }
 
     .social-icons {
@@ -1985,30 +1985,30 @@ textarea {
     }
 
     .why-hire {
-        font-size: 20px;
+        font-size: 28px;
     }
 
     .skill-left p {
-        font-size: 12px;
+        font-size: 16px;
         line-height: 125%;
     }
 
     .hire-me-btn {
         padding: 10px 22px;
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .left-skill-box h4,
     .right-skill-box h4,
     .bottom-left-skill-box h4 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .right-skill-box p,
     .bottom-left-skill-box p,
     .left-skill-box p {
-        font-size: 10px;
-        line-height: 12px;
+        font-size: 14px;
+        line-height: 14px;
     }
 
 
@@ -2016,27 +2016,27 @@ textarea {
     .left-content h1,
     .middle-content h1,
     .right-content h1 {
-        font-size: 28px;
-        line-height: 18px;
+        font-size: 34px;
+        line-height: 20px;
         margin: 0;
     }
 
     .left-content p,
     .middle-content p,
     .right-content p {
-        font-size: 18px;
+        font-size: 24px;
         margin: 0;
 
     }
 
     .portfolio-left h4,
     .portfolio-left h5 {
-        font-size: 18px;
+        font-size: 22px;
         margin: 0;
     }
 
     .portfolio-left p {
-        font-size: 12px;
+        font-size: 14px;
         margin: 0;
     }
 
@@ -2049,7 +2049,7 @@ textarea {
     }
 
     .splide__arrow--left i, .splide__arrow--right i {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .icon-container {
@@ -2083,7 +2083,7 @@ textarea {
 
     .btn-submit {
         padding: 12px 12px;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 125%;
     }
 
@@ -2120,8 +2120,8 @@ textarea {
     }
 
     .skills-title {
-        font-size: 16px;
-        line-height: 10px;
+        font-size: 20px;
+        line-height: 14px;
     }
 
     .image-container {
@@ -2131,8 +2131,8 @@ textarea {
     }
 
     .portfolio-title {
-        font-size: 16px;
-        line-height: 10px;
+        font-size: 20px;
+        line-height: 14px;
     }
 
     .text {
@@ -2152,16 +2152,16 @@ textarea {
     }
 
     .contact-title {
-        font-size: 16px;
-        line-height: 10px;
+        font-size: 20px;
+        line-height: 14px;
     }
 
     .contact-content h2 {
-        font-size: 16px;
+        font-size: 22px;
     }
 
     .contact-content p {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 125%;
     }
 
