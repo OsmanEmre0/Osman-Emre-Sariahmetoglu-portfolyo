@@ -361,18 +361,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const portfolioItems = document.querySelectorAll('.portfolio-right .splide__slide');
 
+
 portfolioItems.forEach((item, index) => {
     gsap.from(item, {
         scrollTrigger: {
             trigger: item,
             start: 'top 80%',
             once: true,
+            invalidateOnRefresh: true
         },
         x: 100,
         opacity: 0,
         duration: 0.5,
         ease: 'power2.out',
-        delay: index * 0.2
+        delay: index * 0.2,
+        force3D: true,
+        onStart: () => item.style.willChange = 'transform, opacity',
+        onComplete: () => item.style.willChange = 'auto'
     });
 });
 

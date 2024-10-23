@@ -1877,7 +1877,7 @@ textarea {
 
     .text-content p {
         font-size: 16px;
-        line-height: 14px;
+        line-height: 125%;
     }
 
     .header-section {
@@ -2168,6 +2168,16 @@ textarea {
     .contact-item {
         margin-bottom: 20px;
         font-size: 14px;
+    }
+
+    .balloon-and-dot {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .portfolio-last {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
